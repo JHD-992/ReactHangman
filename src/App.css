@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* set styles for the body section */
+  body {
+    background-color: #34495e;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* set styles for the header section */
+  #header {
+   text-align: center;
+   text-shadow: 1px 1px black;
+  }
+  
+  /* set styles for the help section */
+  #help{
+    display: none;
+    color: black;
+    text-shadow: 0px 0px;
+    background-color: lightblue;
+  }
+
+
+  /* set styles for the main game section */
+  .hangmanGame {
+    padding: 20px 30px;
+    position: relative;
+    margin: auto;
+    height: 350px;
+    width: 450px;
+  }
+  
+
+  /* set styles for the main hangman figure */
+  .Gallows {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+  }
+  
+  /* set styles for the wrong letter container */
+  .containWrongLetter {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  
+  /* set styles for the wrong letter paragraphs */
+  .containWrongLetter p {
+    margin: 0 0 5px;
+  }
+  
+  /* set styles for the span that will contain the incorrect letters */
+  .containWrongLetter span {
+    font-size: 24px;
+  }
+  
+  /* Set styles for the selected word */
+  .word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+
+  /* set styles for the correct letters to be displayed */
+  .letter {
+    border-bottom: 3px solid #2980b9;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+  }
+  
+
+  /* set the styles for the contianer of the popup message */
+  .ContainPopup {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* display: flex; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  /* set the styles for the popup */
+  .popup {
+    background: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* set the styles for the popup button */
+  .popup button {
+    cursor: pointer;
+    background-color: #fff;
+    color: #2980b9;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  
+  /* set the styles for the popup button */
+  .popup button:active {
+    transform: scale(0.98);
+  }
+  
+  /* set the styles for the popup button */
+  .popup button:focus {
+    outline: 0;
+  }
+  
+  /* set the styles for the alert container */
+  .AlertContainer {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* set the styles for the alert container paragraph */
+  .AlertContainer p {
+    margin: 0;
+  }
+  
+  /* set the styles for the alert container when it is being shown */
+  .AlertContainer.show {
+    transform: translateY(-50px);
+  }  
